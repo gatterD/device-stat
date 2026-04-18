@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "device-stats-service"
+version = "0.1.0"
+description = "REST service for collecting and analyzing device statistics"
+authors = ["Gatter <evgeniy.martsin@mail.ru>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.110.0"
+uvicorn = {extras = ["standard"], version = "^0.27.0"}
+sqlalchemy = "^2.0.25"
+alembic = "^1.13.1"
+psycopg2-binary = "^2.9.9"
+pydantic = "^2.6.0"
+pydantic-settings = "^2.1.0"
+celery = "^5.3.6"
+redis = "^5.0.1"
+python-dotenv = "^1.0.1"
+numpy = "^1.26.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-asyncio = "^0.23.5"
+httpx = "^0.26.0"
+locust = "^2.20.0"
+black = "^24.1.1"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
